@@ -54,6 +54,9 @@ export default class TestListView extends Component {
             }
         }
         else {
+            if (this.state.isLoadingMore == true) {
+                return;
+            }
             this.page ++;
             this.setState({isLoadingMore: true});
         }
